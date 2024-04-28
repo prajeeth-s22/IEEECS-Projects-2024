@@ -1,0 +1,136 @@
+To create a home page for the Electronics section of Amazon.in and a cart page with a dark mode toggle, we'll use HTML, CSS, and JavaScript. Here's the code:
+
+```html
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Amazon Electronics</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Cameras</a></li>
+        </ul>
+    </nav>
+    
+    <section class="products">
+        <h2>Featured Products</h2>
+        <!-- Add featured products here -->
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Amazon Electronics</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```html
+<!-- cart.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+    
+    <section class="cart-items">
+        <h2>Cart Items</h2>
+        <!-- Add cart items here -->
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Amazon Electronics</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```css
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #232f3e;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #232f3e;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+```
+
+```javascript
+// script.js
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+});
+```
+
+This code creates a simple home page for the Electronics section of Amazon.in and a cart page. It includes a dark mode toggle button that switches between light and dark mode when clicked. The styling is done using CSS, and the dark mode functionality is implemented using JavaScript.
